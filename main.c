@@ -7,6 +7,7 @@
 #include <Windows.h>
 
 int main(void){
+
     int varInt = 123456;
     char arrChar[128] = "DefaultString";
     int *ptr2int;
@@ -15,10 +16,9 @@ int main(void){
     ptr2ptr = &ptr2int;
     int ***ptr2ptr2;
     ptr2ptr2 = &ptr2ptr;
+
     while(1==1){
         printf("Process ID: %d\n\n", GetCurrentProcessId());
-        //Possible problem with compiler as 'undefined reference to getppid' when it should be defined in unistd.h
-        //printf("Parent ID: %d\n", getppid());
 
         printf("varInt\t\t(0x%p) = %d\n", &varInt, varInt);
         printf("varChar\t\t(0x%p) = %s\n", &arrChar, arrChar);
