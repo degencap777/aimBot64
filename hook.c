@@ -18,7 +18,7 @@ int main(void){
     int read = 0;
     BOOL hook = ReadProcessMemory(
         hProcess,
-        (LPCVOID)0x0060FEFC,  //Address we are trying to hook
+        (LPCVOID)0x0060FEFC,  //Address we are trying to hook. Change to address of varInt
         &read,               //Buffer we are writing to
         sizeof(int),        //Size of things we are reading
         NULL
